@@ -12,7 +12,7 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     UserRepository repo;
-// register
+    // register
     // login
     //getAll
     //delete
