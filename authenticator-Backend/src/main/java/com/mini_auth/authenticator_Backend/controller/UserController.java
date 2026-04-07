@@ -26,19 +26,19 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(@RequestBody User user){
-        User u=repo.findByUserName(user.getUsername());
+        User u=repo.findByUsername(user.getUsername());
         if(u!=null && (u.getPassword().equals(user.getPassword()))){
             return "Login Success";
         }
         return "Invalid Username or Password";
     }
 
-    @PostMapping("/getAll")
+    @GetMapping("/getAll")
     public List<User> getAllUsers(){
         return repo.findAll();
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable int id){
         if(repo.existsById(id)){
             repo.deleteById(id);
