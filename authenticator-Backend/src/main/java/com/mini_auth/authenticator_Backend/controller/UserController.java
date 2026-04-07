@@ -1,7 +1,6 @@
 package com.mini_auth.authenticator_Backend.controller;
 import com.mini_auth.authenticator_Backend.model.User;
 import com.mini_auth.authenticator_Backend.repository.UserRepository;
-import jakarta.persistence.PostUpdate;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
